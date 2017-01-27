@@ -1,12 +1,10 @@
 <section class="taskbox">
-  <table class="tasklist">
-    <tr>
-      <th>Current Tasks</th>
-    </tr>
-    <tr ng-repeat="task in main.tasks">
-      <td>{{ task.text }}</td>
-    </tr>
-  </table>
+  <h3>Current Tasks</h3>
+    <ul class="tasklist">
+    <li ng-repeat="task in main.tasks">
+      <h4>{{ task }}</h4>
+    </li>
+  </ul>
   <br />
   <br />
 </section>
@@ -14,6 +12,6 @@
 <section class="formbox">
   <form class="addform">
     <input placeholder="Add a task" ng-model="main.newTask"/>
-    <button class="btn btn-primary" type="button" ng-click="main.addTask()">Add Task</button>
+    <button class="btn btn-primary" type="button" ng-click="main.addTask(main.newTask)">Add Task</button>
   </form>
 </section>

@@ -1,15 +1,14 @@
 (function() {
   function MainCtrl($firebaseArray) {
     var ref = firebase.database().ref();
-    var tasks = $firebaseArray(ref)
+    this.tasks = $firebaseArray(ref)
 
-    var addTask = function(newTask) {
-      tasks.$add({ text: newTask });
+    this.addTask = function(newTask) {
+      var now = new Date();
+      this.tasks.$add({ text: newTask, completed: false, expired: false, created: now.getTime() });
+      this.newTask = " "
     }
 
-    return {
-      all: tasks
-    };
   };
 
   angular

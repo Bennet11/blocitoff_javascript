@@ -5,8 +5,13 @@
   background-color: lightgrey;
 }
 
-.taskbox .tasklist {
+.taskbox .tasklist li{
+  list-style-type: none;
+  margin: 0;
+}
 
+.taskbox .tasklist {
+  padding: 0;
 }
 
 .formbox {

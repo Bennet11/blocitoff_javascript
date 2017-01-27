@@ -1,0 +1,29 @@
+.taskbox {
+  width: 100%;
+  height: 100%;
+  padding: .5rem;
+  background-color: lightgrey;
+}
+
+.taskbox .tasklist li{
+  list-style-type: none;
+  margin: 0;
+}
+
+.taskbox .tasklist {
+  padding: 0;
+}
+
+.formbox {
+
+}
+
+.formbox .addform {
+
+}
+
+
+table {
+  width: 80%;
+  border: 1;
+}

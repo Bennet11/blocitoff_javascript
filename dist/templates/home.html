@@ -1,1 +1,17 @@
-<h1>Home Page</h1>
+<section class="taskbox">
+  <h3>Current Tasks</h3>
+    <ul class="tasklist">
+    <li ng-repeat="task in main.tasks">
+      <h4>{{ task }}</h4>
+    </li>
+  </ul>
+  <br />
+  <br />
+</section>
+
+<section class="formbox">
+  <form class="addform">
+    <input placeholder="Add a task" ng-model="main.newTask"/>
+    <button class="btn btn-primary" type="button" ng-click="main.addTask(main.newTask)">Add Task</button>
+  </form>
+</section>

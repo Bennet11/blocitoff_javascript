@@ -13,7 +13,7 @@
       });
   }
 
-angular
-  .module('BlocItOff', ['ui.router', 'firebase'])
-  .config(config);
+  angular
+    .module('BlocItOff', ['ui.router', 'firebase'])
+    .config(config);
 })();

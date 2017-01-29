@@ -4,10 +4,18 @@
     this.tasks = $firebaseArray(ref)
 
     this.addTask = function(newTask) {
-      var now = new Date();
-      this.tasks.$add({ text: newTask, completed: false, expired: false, created: now.getTime() });
+      this.tasks.$add({ text: newTask, completed: false, expired: false, created: firebase.database.ServerValue.TIMESTAMP  });
       this.newTask = " "
     }
+
+    this.expiredTask = function(task) {
+      var currentTime = new Date();
+      if ((currentTime - task.created) >= 604800000){
+        return true;
+      } else {
+        return false;
+      }
+    };
 
   };
 

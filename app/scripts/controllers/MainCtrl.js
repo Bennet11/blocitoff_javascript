@@ -10,7 +10,7 @@
 
     this.expiredTask = function(task) {
       var currentTime = new Date();
-      if ((currentTime - task.created) >= 604800000){
+      if ((currentTime - task.created) >= 60000){
         return true;
       } else {
         return false;

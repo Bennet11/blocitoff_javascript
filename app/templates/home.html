@@ -1,7 +1,7 @@
 <section class="taskbox">
   <h3>Current Tasks</h3>
     <ul class="tasklist">
-    <li ng-repeat="task in main.tasks" ng-hide="expiredTask(task)">
+    <li ng-repeat="task in main.tasks" ng-hide="main.expiredTask(task)">
       <h4>{{ task }}</h4>
     </li>
   </ul>

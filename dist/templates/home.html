@@ -1,8 +1,8 @@
 <section class="taskbox">
   <h3>Current Tasks</h3>
     <ul class="tasklist">
-    <li ng-repeat="task in main.tasks" ng-hide="main.expiredTask(task)">
-      <h4>{{ task }}</h4>
+    <li ng-repeat="task in main.tasks" ng-hide="task.expired">
+      <h4>{{ task.text }} - {{ task.priority }}</h4>
     </li>
   </ul>
   <br />
@@ -12,6 +12,11 @@
 <section class="formbox">
   <form class="addform">
     <input placeholder="Add a task" ng-model="main.newTask"/>
+    <select ng-model="main.setPriority">
+      <option value="High">High</option>
+      <option value="Medium">Medium</option>
+      <option value="Low">Low</option>
+    </select>
     <button class="btn btn-primary" type="button" ng-click="main.addTask(main.newTask)">Add Task</button>
   </form>
 </section>

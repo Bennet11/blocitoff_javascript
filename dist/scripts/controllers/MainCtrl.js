@@ -4,19 +4,15 @@
     this.tasks = $firebaseArray(ref)
 
     this.addTask = function(newTask) {
-      this.tasks.$add({ text: newTask, completed: false, expired: false, created: firebase.database.ServerValue.TIMESTAMP  });
+      this.tasks.$add({
+        text: this.newTask,
+        completed: false,
+        expired: false,
+        priority: this.setPriority,
+        created: firebase.database.ServerValue.TIMESTAMP
+      });
       this.newTask = " "
     }
-
-    this.expiredTask = function(task) {
-      var currentTime = new Date();
-      if ((currentTime - task.created) >= 60000){
-        return true;
-      } else {
-        return false;
-      }
-    };
-
   };
 
   angular

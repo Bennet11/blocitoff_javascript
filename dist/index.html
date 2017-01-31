@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
 </head>
 <body ng-controller="MainCtrl as main">
-
+    <nav class="navbar">
+      <a ui-sref="home">Current Tasks</a>
+      <a ui-sref="history">Task History</a>
+    </nav>
     <ui-view></ui-view>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
@@ -30,5 +33,6 @@
     </script>
     <script src="/scripts/app.js"></script>
     <script src="/scripts/controllers/MainCtrl.js"></script>
+    <script src="/scripts/controllers/HistoryCtrl.js"></script>
 </body>
 </html>

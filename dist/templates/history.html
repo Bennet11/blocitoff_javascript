@@ -1,0 +1,10 @@
+<section class="taskbox" ng-controller="MainCtrl as main">
+  <h3>Past Tasks</h3>
+  <ul class="tasklist">
+    <li ng-repeat="task in main.tasks" ng-show="main.expiredTask(task)">
+      <h4>{{ task }}</h4>
+    </li>
+  </ul>
+  <br />
+  <br />
+</section>

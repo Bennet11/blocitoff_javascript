@@ -3,9 +3,9 @@
     <div class="taskclass">
       <h4>High Priority</h4>
         <ul class="tasklist">
-          <li ng-repeat="task in main.tasks" ng-hide="task.expired || task.completed === true">
-            <h4>{{ task.text }}</h4>
-            <input type="checkbox" ng-model="main.task" ng-change="main.completedTask(main.task)">
+          <li ng-repeat="task in main.tasks" ng-hide="(task.priority !== 'High')||(task.expired || task.completed )">
+            <h4>{{ task }}</h4>
+            <input type="checkbox" ng-model="task.completed" ng-change="main.completedTask(task)">
           </li>
         </ul>
     </div>
@@ -14,9 +14,9 @@
     <div class="taskclass">
       <h4>Medium Priority</h4>
         <ul class="tasklist">
-          <li ng-repeat="task in main.tasks" ng-hide="task.expired || task.completed === true">
-            <h4>{{ task.text }}</h4>
-            <input type="checkbox" ng-model="main.task" ng-change="main.completedTask(main.task)">
+          <li ng-repeat="task in main.tasks" ng-hide="(task.priority !== 'Medium')||(task.expired || task.completed )">
+            <h4>{{ task }}</h4>
+            <input type="checkbox" ng-model="task.completed" ng-change="main.completedTask(task)">
           </li>
         </ul>
     </div>
@@ -25,9 +25,9 @@
     <div class="taskclass">
       <h4>Low Priority</h4>
         <ul class="tasklist">
-          <li ng-repeat="task in main.tasks" ng-hide="task.expired || task.completed === true">
-            <h4>{{ task.text }}</h4>
-            <input type="checkbox" ng-model="main.task" ng-change="main.completedTask(main.task)">
+          <li ng-repeat="task in main.tasks" ng-hide="(task.priority !== 'Low')||(task.expired || task.completed )">
+            <h4>{{ task }}</h4>
+            <input type="checkbox" ng-model="task.completed" ng-change="main.completedTask(task)">
           </li>
         </ul>
     </div>

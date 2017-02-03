@@ -9,7 +9,7 @@
         console.log("currentTime is " + currentTime);
         console.log("task.created is " + task.created);
         console.log("currentTime.getTime() is " + currentTime.getTime());
-        if ((currentTime.getTime() - task.created) >= 80000){
+        if ((currentTime.getTime() - task.created) >= 100000000000){
           task.expired = true;
           tasks.$save(task);
           return true;

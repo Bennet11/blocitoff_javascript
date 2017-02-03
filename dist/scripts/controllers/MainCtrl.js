@@ -11,7 +11,15 @@
         priority: this.setPriority,
         created: firebase.database.ServerValue.TIMESTAMP
       });
+      if (this.setPriority === undefined) {
+        this.setPriority = "Low";
+      }
+      return newTask
       this.newTask = " "
+    }
+
+    this.completedTask = function(task) {
+      task.completed = true;
     }
   };
 
